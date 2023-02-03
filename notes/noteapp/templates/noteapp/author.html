@@ -1,0 +1,8 @@
+{% extends "noteapp/base.html" %} {% block content %}
+
+<h1>{{note.name}}</h1>
+<p>Name: <b>{{author.full_name}}</b></p>
+<p>Born location: <b>{{author.born_location}}</b></p>
+<p>Born date: <b>{{author.born_date.date}}</b></p>
+<p>Description: <b>{{author.description}}</b></p>
+{% endblock %}

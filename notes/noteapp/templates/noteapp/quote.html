@@ -1,0 +1,6 @@
+{% extends "noteapp/base.html" %} {% load extract_tags %} {% block content %}
+
+<p>Description: <b>{{quote.quote}}</b></p>
+<p>Tags: <small> {{ quote.tags|tags }} </small></p>
+<a href="{% url 'noteapp:author' quote.author %}" class="btn btn-primary btn-sm" type="button">{{ quote.author }}</a>
+{% endblock %}
