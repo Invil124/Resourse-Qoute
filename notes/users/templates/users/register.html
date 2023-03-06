@@ -6,7 +6,7 @@
     <h2>Sign Up</h2>
 </div>
 
-<form method="post">
+<form method="post" action="{% url 'users:signup' %}">
     {% csrf_token %}
     <div>
         <label> Username:
@@ -14,7 +14,12 @@
         </label>
         <span>{{ form.errors.username }}</span>
     </div>
-    <br>
+    <div>
+        <label> Email:
+            {{ form.email }}
+        </label>
+        <span>{{ form.errors.email }}</span>
+    </div>
     <div>
         <label> Password:
             {{ form.password1 }}
@@ -32,5 +37,7 @@
         <button type="reset" class="secondary">Reset</button>
     </div>
 </form>
+
+{% endblock %}
 
 {% endblock %}
